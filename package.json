@@ -1,0 +1,43 @@
+{
+  "name": "@jottinger/npm-module-test",
+  "version": "1.0.0",
+  "description": "test module",
+  "main": "index.js",
+  "engines": {
+    "node": ">10.0.0 <13.0.0"
+  },
+  "scripts": {
+    "test:lint": "eslint index.js --ext js",
+    "test": "MODE=test mocha --ui qunit tests/*",
+    "coverage": "MODE=test nyc mocha --ui qunit tests/*"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jottinger/npm-module-test.git"
+  },
+  "author": "Joseph B. Ottinger <joeo@enigmastation.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jottinger/npm-module-test/issues"
+  },
+  "homepage": "https://github.com/jottinger/npm-module-test#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-istanbul": "^6.0.0",
+    "chai": "^4.2.0",
+    "eslint": "^7.3.1",
+    "eslint-config-webbylab": "^5.4.1",
+    "eslint-plugin-fetch": "0.0.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-more": "^1.0.0",
+    "eslint-plugin-no-require-lodash": "^1.1.0",
+    "eslint-plugin-prefer-spread": "^1.0.3",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-security": "^1.4.0",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0"
+  }
+}
